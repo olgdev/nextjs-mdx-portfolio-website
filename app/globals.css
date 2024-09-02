@@ -50,6 +50,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,7 +83,29 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .title {
+    @apply font-serif text-3xl font-bold underline decoration-border/75 decoration-2 underline-offset-8;
+  }
+
+  .prose pre {
+    @apply overflow-x-auto rounded-lg bg-accent px-5 text-sm;
+  }
+
+  .prose code {
+    @apply px-1 py-0.5 rounded-lg;
+  }
+
+  .prose pre code {
+    @apply p-0;
+    line-height: 1.75;
+  }
+
+  .prose code span {
+    @apply font-medium;
   }
 }

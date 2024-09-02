@@ -1,11 +1,13 @@
+import Intro from "@/components/Intro";
+
 const Home = () => {
   return (
     <section className="py-24">
-      <div className="container">
-        <h1 className="text-center text-3xl font-bold">Welcome to my portfolio</h1>
+      <div className="container max-w-3xl px-4">
+        <Intro />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Home;
