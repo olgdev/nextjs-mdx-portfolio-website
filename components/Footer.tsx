@@ -1,40 +1,31 @@
-import React, { JSX, SVGProps } from "react";
+import React from "react";
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon
+} from "@radix-ui/react-icons";
+import { IconProps } from "@radix-ui/react-icons/dist/types";
 
-const navigation = [
+const socialMedia = [
   {
     name: "LinkedIn",
-    href: "#",
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-      <svg fill="currentColor" viewBox="0 0 20 20" {...props}>
-        <path
-          fill="currentColor"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9a1 1 0 000 2h5a1 1 0 000-2zM9 9a1 1 0 000 2h2a1 1 0 100-2H9z"
-        />
-      </svg>
+    href: "https://www.linkedin.com/in/oleh-miroshnychenko",
+    icon: (props: IconProps & React.RefAttributes<SVGSVGElement>) => (
+      <LinkedInLogoIcon {...props} />
     )
   },
   {
     name: "X",
     href: "#",
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-      <svg fill="currentColor" viewBox="0 0 20 20" {...props}>
-        <path
-          fill="currentColor"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9a1 1 0 000 2h5a1 1 0 000-2zM9 9a1 1 0 000 2h2a1 1 0 100-2H9z"
-        />
-      </svg>
+    icon: (props: IconProps & React.RefAttributes<SVGSVGElement>) => (
+      <TwitterLogoIcon {...props} />
     )
   },
   {
     name: "GitHub",
-    href: "#",
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-      <svg fill="currentColor" viewBox="0 0 20 20" {...props}>
-        <path
-          fill="currentColor"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9a1 1 0 000 2h5a1 1 0 000-2zM9 9a1 1 0 000 2h2a1 1 0 100-2H9z"
-        />
-      </svg>
+    href: "https://github.com/olgdev",
+    icon: (props: IconProps & React.RefAttributes<SVGSVGElement>) => (
+      <GitHubLogoIcon {...props} />
     )
   }
 ];
@@ -45,7 +36,7 @@ const Footer = ({}) => {
       <div className="container max-w-3xl px-4">
         <div className="md:flex md:items-center md:justify-between">
           <nav className="flex justify-center space-x-6 md:order-2">
-            {navigation.map(item => (
+            {socialMedia.map(item => (
               <a
                 key={item.name}
                 href={item.href}
@@ -61,9 +52,9 @@ const Footer = ({}) => {
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <a href="https://github.com/michal-z" target="_blank">
+              <a href="https://github.com/olgdev" target="_blank">
                 Oleh Miroshnychenko
-              </a>
+              </a>{" "}
               All rights reserved.
             </p>
           </div>

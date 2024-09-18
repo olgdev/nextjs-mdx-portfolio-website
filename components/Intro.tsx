@@ -12,10 +12,10 @@ const Intro = ({}) => {
           Poland, with a strong background in web development, team leadership,
           and project management. Contributed to various sectors including
           e-commerce, fintech, and iGaming. For 10 years, I honed my skills in
-          responsive design, e-commerce development, WordPress customization,
-          React projects, and version control systems. My career journey
-          reflects my ability to adapt, lead, and deliver high-quality results
-          across various industries and projects.
+          responsive design, e-commerce development, React projects, WordPress
+          customization, and version control systems. My career journey reflects
+          my ability to adapt, lead, and deliver high-quality results across
+          various industries and projects.
         </p>
       </div>
       <div className="relative">
